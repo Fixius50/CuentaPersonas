@@ -1,4 +1,4 @@
-        document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
             // Referencias a los elementos del DOM - Contadores
             const totalDisplay = document.getElementById('total-display');
             const totalTexto = document.getElementById('total-texto');
