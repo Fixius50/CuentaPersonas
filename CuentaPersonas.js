@@ -1,4 +1,4 @@
-document.addEventListener('DOMContentLoaded', () => {
+        document.addEventListener('DOMContentLoaded', () => {
             // Referencias a los elementos del DOM - Contadores
             const totalDisplay = document.getElementById('total-display');
             const totalTexto = document.getElementById('total-texto');
@@ -25,6 +25,8 @@ document.addEventListener('DOMContentLoaded', () => {
             const bgUrlInput = document.getElementById('bg-url-input');
             const applyBgBtn = document.getElementById('apply-bg-btn');
             const themeToggleBtn = document.getElementById('theme-toggle-btn');
+            const hombresColorPicker = document.getElementById('hombres-color-picker');
+            const mujeresColorPicker = document.getElementById('mujeres-color-picker');
 
 
             // Estado inicial
@@ -126,6 +128,14 @@ document.addEventListener('DOMContentLoaded', () => {
                 if (url) {
                     setBackgroundImage(url);
                 }
+            });
+
+            hombresColorPicker.addEventListener('input', (e) => {
+                document.documentElement.style.setProperty('--color-hombres', e.target.value);
+            });
+            
+            mujeresColorPicker.addEventListener('input', (e) => {
+                document.documentElement.style.setProperty('--color-mujeres', e.target.value);
             });
 
 
